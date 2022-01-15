@@ -43,7 +43,7 @@ async function checkWorkflow(workflowPath: string): Promise<WorkflowWithErrors> 
   try {
     const workflowFileContent = await fs.readFile(workflowPath, 'utf8');
     safeLoad(workflowFileContent);
-    workflowErrors.errors.push(`No icon named `)
+    
   } catch (e) {
     workflowErrors.errors.push(e.toString())
   }
